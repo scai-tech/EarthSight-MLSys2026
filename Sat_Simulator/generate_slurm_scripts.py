@@ -94,7 +94,7 @@ def _sim_sbatch(job_name: str, command: str, account: str, email: str,
 #!/bin/bash
 #SBATCH --job-name={job_name}
 #SBATCH --nodes=1
-#SBATCH --mem=256G
+#SBATCH --mem=240G
 #SBATCH --account={account}
 #SBATCH --time={SLURM_SIM_WALL}
 #SBATCH --output=logs/%x-%j.out
@@ -253,17 +253,17 @@ def main() -> None:
     # ------------------------------------------------------------------
     print("\nGenerating post-simulation scripts...")
 
-    with open(os.path.join(script_dir, "generate_table6.sbatch"), "w", encoding="utf-8") as fh:
+    with open(os.path.join(script_dir, "generate_table3.sbatch"), "w", encoding="utf-8") as fh:
         fh.write(_table_sbatch(
-            job_name  = "earthsight-table6",
-            command   = "mkdir -p results\npython generate_table_6.py | tee results/table6.txt",
+            job_name  = "earthsight-table3",
+            command   = "mkdir -p results\npython generate_table_3.py | tee results/table6.txt",
             account   = args.account,
             email     = args.email,
             wall_time = "0:15:00",
             mem       = "32G",
             repo_path = repo_path,
         ))
-    print("  generate_table6.sbatch  (seconds; requires simulation logs in logs/)")
+    print("  generate_table3.sbatch  (seconds; requires simulation logs in logs/)")
 
     with open(os.path.join(script_dir, "generate_main_result.sbatch"), "w", encoding="utf-8") as fh:
         fh.write(_table_sbatch(

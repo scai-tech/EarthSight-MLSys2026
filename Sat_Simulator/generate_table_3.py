@@ -32,6 +32,6 @@ for folder, val in sorted(power.items()):
 import os
 os.makedirs("results", exist_ok=True)
 
-with open("results/table6.txt", "w+") as f:
+with open("results/table3.txt", "w+") as f:
     for folder, val in sorted(power.items()):
         f.write(f"{folder}: {100*val[0]:.2f}%\n")

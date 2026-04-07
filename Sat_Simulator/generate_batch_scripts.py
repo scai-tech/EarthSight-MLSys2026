@@ -234,8 +234,8 @@ def _postrun_script() -> str:
                        "Run ONLY after all simulations have finished.",
         )
         + "mkdir -p results\n\n"
-        + "echo 'Generating Table 6 (power analysis)...'\n"
-        + "python generate_table_6.py | tee results/table6.txt\n\n"
+        + "echo 'Generating Table 3 (power analysis)...'\n"
+        + "python generate_table_3.py | tee results/table6.txt\n\n"
         + "echo 'Generating main result figure...'\n"
         + "python generate_main_result.py\n\n"
         + "echo\n"
