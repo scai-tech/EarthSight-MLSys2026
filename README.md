@@ -51,7 +51,7 @@ The artifact reproduces the following results from the paper. Two types of scrip
 |--------|---------------|--------|--------------------|-----------------|
 | **Table 4** | Per-image compute time for Serval vs. EarthSight STL/MTL; demonstrates the 1.9x compute speedup from dynamic filter ordering | `generate_table_4.py` | No | ~20 min |
 | **Table 5** | EarthSight MTL compute time vs. the optimal (oracle) multitask schedule; validates that MTL evaluation is near-optimal | `generate_table_5.py` | No | ~90 min |
-| **Table 6** | On-board power consumption breakdown across hardware platforms and scenarios; shows EarthSight stays within power budget | `generate_table_6.py` | Yes | Seconds |
+| **Table 3** | On-board power consumption breakdown across hardware platforms and scenarios; shows EarthSight stays within power budget | `generate_table_3.py` | Yes | Seconds |
 | **Main figure** | 90th percentile end-to-end latency bar chart across all scenarios and hardware (the primary paper result) | `generate_main_result.py` | Yes | Seconds |
 
 **Start with Tables 4 and 5** — they can run immediately without any simulation data.
@@ -80,7 +80,7 @@ All artifact scripts are run from the `Sat_Simulator/` directory unless otherwis
 
 ```bash
 # 1. Clone the repository (if you haven't already)
-git clone https://github.com/your-org/EarthSight-MLSys2026
+git clone https://github.com/scai-tech/EarthSight-MLSys2026
 cd EarthSight-MLSys2026
 
 # 2. Create and activate a Python virtual environment
