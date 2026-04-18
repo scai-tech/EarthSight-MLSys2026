@@ -4,8 +4,13 @@
 
 **Ansel Kaplan Erol, Seungjun Lee, Divya Mahajan**
 
+*EarthSight* has been accepted to **MLSys 2026!** Please click the Arxiv tile above to view our pre-print.
+
 This repository contains the simulation framework for EarthSight, a distributed runtime system that reduces satellite imagery delivery latency by performing on-board ML inference coordinated with ground-station scheduling. EarthSight reduces average compute time per image by **1.9x** and lowers 90th percentile end-to-end latency from **51 to 21 minutes** compared to baseline systems.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/91cb12f4-4b1e-4b06-af77-cdce394132c9" alt="image" width="370" height="322" />
+</div>
 ---
 
 ## Table of Contents
@@ -39,9 +44,14 @@ Traditional satellite imaging pipelines downlink all captured images before anal
 
 3. **Dynamic filter ordering** — Uses model selectivity, accuracy, and execution cost to evaluate DNF filter formulas in an order that rejects low-value images early, preserving on-board compute and power resources.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/fc697340-0ff9-4ab8-94bc-e6e86d986a90" alt="image" width="569" height="304" />
+</div>
 ---
 
 ## Artifact Evaluation
+
+*EarthSight* has been awarded the artifacts available and artifacts functional badges. Certain simulation results were unable to be reproduced during the review period due to memory requirements and run-time duration.
 
 ### Reproducible Results
 
